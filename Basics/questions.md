@@ -26,4 +26,25 @@ Heap Allocation:
 
 ## question 2: what is unique_ptr in modern C++?
 
-## question 3: 
+## question 3: inheritance? 
+-> 
+```class DerivedClass : mode_of_inheritance BaseClass {
+    // Body of the Derived Class
+};
+```
+public, protected, private (both public and protected members of the base class will become private in the deireved class. it is the default mode)
+-> to access private members of the parent class (base class) we have to use getter and setters functions and keep them as public.
+-> TYPES: SINGLE, MULTILEVEL, MULTIPLE, HEIRARCHICAL, HYBRID
+
+## what is static keyword?
+-> static members belong to the class and not the objects. static members from the base class are not inherited by the derieved class in the traditional way. It is initialized before any object(even the main class itself). it is useful in maintaining data shared among all instances of a class.
+
+## friend function and classes?
+-> allows access to private and protected memebers of the class. 
+
+## Prevent memory leaks?
+-> In serious coding (production level), memory leaks are a disaster 🧨, so rule is:
+
+If you `new`, you must `delete`.
+If you `malloc`, you must `free`.
+
